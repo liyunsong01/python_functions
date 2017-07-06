@@ -12,7 +12,9 @@ def rename_files():
     #(2) for each file, rename filename
     # string.translate(table which translate one set of characters to another set, list of characters to remove)
     for file_name in file_list:
-        os.rename(file_name,file_name.translate(None,'0123456789'))
+        print('old name-'+file_name)
+        print('new name-'+file_name.translate(None,'abc'))
+        os.rename(file_name,file_name.translate(None,'abc'))
     os.chdir(saved_path)
     
 rename_files()
